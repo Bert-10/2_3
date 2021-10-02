@@ -15,12 +15,15 @@ namespace _2_3
         public Form1()
         {
             InitializeComponent();
+            textBox1.Text = Properties.Settings.Default.s1.ToString();
+            textBox3.Text = Properties.Settings.Default.s2.ToString();
+            textBox2.Text = Properties.Settings.Default.outText.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             int a;
-            string s1 = textBox1.Text;
+            string s1 = textBox1.Text,outText;
             string s2 = textBox3.Text,check="1234567890-=_+()!@#$%^&*/[]{}?<>.,` ";
             
             try
@@ -54,7 +57,13 @@ namespace _2_3
                 return; // а затем прерываем обработчик
             }
 
-            textBox2.Text = Logic.Compare(s1, s2); 
+            outText = Logic.Compare(s1, s2);
+            textBox2.Text = outText;
+
+            Properties.Settings.Default.s1 = s1;
+            Properties.Settings.Default.s2 = s2;
+            Properties.Settings.Default.outText = outText;
+            Properties.Settings.Default.Save();
 
         }
 
