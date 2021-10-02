@@ -73,7 +73,25 @@ namespace _2_3
             textBox2.Text = "";
             textBox3.Text = "";
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                textBox3.Focus();
+                // button1_Click( sender, e);
+            }
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                button1_Click(sender, e);
+            }
+        }
     }
+
     public class Logic
     {
         public static string Compare(string s1, string s2)
