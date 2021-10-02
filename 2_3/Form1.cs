@@ -19,9 +19,43 @@ namespace _2_3
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int a;
             string s1 = textBox1.Text;
-            string s2 = textBox3.Text;
-            textBox2.Text = Logic.Compare(s1, s2); ;
+            string s2 = textBox3.Text,check="1234567890-=_+()!@#$%^&*/[]{}?<>.,` ";
+            
+            try
+            {
+                for(int i = 0; i < s1.Length; i++)
+                {
+                    if (check.IndexOf(s1[i]) != -1)
+                    {
+                        a = int.Parse(" ");
+                        break;
+                    }
+                }
+                
+                for (int i = 0; i < s2.Length; i++)
+                {
+                    if (check.IndexOf(s2[i]) != -1)
+                    {
+                        a = int.Parse(" ");
+                        break;
+                    }
+                }
+
+            }
+            catch (FormatException)
+            {
+                // сообщение об ошибке
+                MessageBox.Show("Некорректный ввод. В оба поля можно вводить только буквы", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox1.Text = "";
+                textBox2.Text = "";
+                textBox3.Text = "";
+                return; // а затем прерываем обработчик
+            }
+
+            textBox2.Text = Logic.Compare(s1, s2); 
+
         }
 
         private void button2_Click(object sender, EventArgs e)
