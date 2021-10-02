@@ -80,9 +80,9 @@ namespace _2_3
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(116, 156);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 15);
+            this.label3.Size = new System.Drawing.Size(38, 15);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Ответ:";
+            this.label3.Text = "Ответ";
             // 
             // textBox1
             // 
