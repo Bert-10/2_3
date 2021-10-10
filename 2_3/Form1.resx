@@ -57,4 +57,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Даны два слова. Для каждой буквы первого слова определить, входит ли она во второе слово.
+Повторяющиеся буквы первого слова не рассматривать.
+Например, если заданные слова процессор и информация,
+то для букв первого из них ответом должно быть: нет да да да нет нет.</value>
+  </data>
 </root>

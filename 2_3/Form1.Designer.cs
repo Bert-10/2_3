@@ -29,6 +29,7 @@ namespace _2_3
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,11 +38,12 @@ namespace _2_3
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(86, 229);
+            this.button1.Location = new System.Drawing.Point(41, 185);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 59);
             this.button1.TabIndex = 0;
@@ -51,7 +53,7 @@ namespace _2_3
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(339, 229);
+            this.button2.Location = new System.Drawing.Point(294, 185);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 59);
             this.button2.TabIndex = 1;
@@ -109,11 +111,22 @@ namespace _2_3
             this.textBox3.TabIndex = 7;
             this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(11, 9);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(530, 60);
+            this.label4.TabIndex = 9;
+            this.label4.Text = resources.GetString("label4.Text");
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 354);
+            this.ClientSize = new System.Drawing.Size(556, 264);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -123,7 +136,7 @@ namespace _2_3
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Задача на Str ";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,6 +152,7 @@ namespace _2_3
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

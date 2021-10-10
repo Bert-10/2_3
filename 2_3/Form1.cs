@@ -22,30 +22,46 @@ namespace _2_3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int a;
+            int a,i=0;
+            bool trigger = false;
             string s1 = textBox1.Text,outText;
             string s2 = textBox3.Text,check="1234567890-=_+()!@#$%^&*/[]{}?<>.,` ";
-            
+
             try
             {
-                for(int i = 0; i < s1.Length; i++)
+
+                while (trigger == false)
                 {
+
                     if (check.IndexOf(s1[i]) != -1)
                     {
                         a = int.Parse(" ");
-                        break;
+                        trigger = true;
                     }
+                    i++;
+                    if (i == s1.Length)
+                    {
+                        trigger = true;
+                    }
+
                 }
-                
-                for (int i = 0; i < s2.Length; i++)
+
+                trigger = false;
+                i = 0;
+                while (trigger == false)
                 {
+
                     if (check.IndexOf(s2[i]) != -1)
                     {
                         a = int.Parse(" ");
-                        break;
+                        trigger = true;
+                    }
+                    i++;
+                    if (i == s2.Length)
+                    {
+                        trigger = true;
                     }
                 }
-
             }
             catch (FormatException)
             {
